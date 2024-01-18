@@ -1,0 +1,21 @@
+def chatbot():
+    print("Welcome to the chatbot! Type 'quit' to exit.")
+    while True:
+        user_input = input("You: ")
+        user_input = user_input.lower()  
+if user_input == "quit":
+            break
+  elif "hello" in user_input or "hi" in user_input:
+            print("Bot: Hello there! How can I help you today?")
+        elif "how are you" in user_input:
+            print("Bot: I'm doing well, thanks for asking! How about you?")
+        elif "what is your name" in user_input:
+            print("Bot: You can call me Bard.")
+        elif "what time is it" in user_input:
+            import datetime
+            now = datetime.datetime.now()
+            print("Bot: It's currently", now.strftime("%H:%M"))
+        else:
+            print("Bot: I'm not sure I understand. Could you rephrase your question?")
+if __name__ == "__main__":
+    chatbot()
